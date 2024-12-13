@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="monthNavigation">
+            <button id="prevMonth">&#9664; Mês Anterior</button>
+            <button id="nextMonth">Mês Seguinte &#9654;</button>
+        </div>
+        <h1 id="monthYear" style="font-weight: bold;">Janeiro 2024</h1>
+        <button id="toggleTheme">Alternar Tema</button>
+    </header>
+
+    <div id="calendar">
+        <!-- Cabeçalho fixo com os dias da semana -->
+        <div class="header-cell">Domingo</div>
+        <div class="header-cell">Segunda</div>
+        <div class="header-cell">Terça</div>
+        <div class="header-cell">Quarta</div>
+        <div class="header-cell">Quinta</div>
+        <div class="header-cell">Sexta</div>
+        <div class="header-cell">Sábado</div>
+    </div>
+
+    <!-- Modal para eventos -->
+    <div id="eventModal" style="display: none;">
+        <div class="modal-content">
+            <h2>Adicionar Evento</h2>
+            <div id="eventList"></div>
+            <form id="eventForm">
+                <label for="eventTitle">Título:</label>
+                <input type="text" id="eventTitle" required>
+
+                <label for="startTime">Hora de Início:</label>
+                <input type="time" id="startTime" required>
+
+                <label for="endTime">Hora de Fim:</label>
+                <input type="time" id="endTime" required>
+
+                <label for="eventDescription">Descrição:</label>
+                <textarea id="eventDescription"></textarea>
+
+                <button type="submit">Salvar</button>
+            </form>
+            <button id="closeModal">Fechar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
